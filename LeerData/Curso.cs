@@ -12,6 +12,7 @@ namespace LeerData
         public byte[] FotoPortada { get; set; }
         // Referencia a Precios dentro de Cursos
         public Precio Precio { get; set; }
-        public ICollection<Comentario> ComentarioLista { get; set; }
+        public ICollection<Comentario> ListaComentarios { get; set; }
+        public ICollection<CursoInstructor> InstructorLink { get; set; }
     }
 }
