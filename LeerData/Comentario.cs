@@ -14,4 +14,4 @@ namespace LeerData
 
         public Curso Curso { get; set; }
     }
-}
+} 
