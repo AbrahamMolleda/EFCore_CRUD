@@ -20,7 +20,7 @@ namespace LeerData
                 //     Console.WriteLine(curso.Titulo + " ----- " + curso.Descripcion);
                 // }
                 // Evita que Ef Core guarde en memoria cache la transaccion
-                var cursos = db.Curso.Include( p => p.Precio).AsNoTracking();
+                var cursos = db.Curso.Include( p => p.Precio ).AsNoTracking();
                 foreach( var curso in cursos ){
                     Console.WriteLine(curso.Titulo + " --- " + curso.Precio.PrecioActual ) ;
                 }

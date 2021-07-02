@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace LeerData
 {
@@ -11,5 +12,6 @@ namespace LeerData
         public byte[] FotoPortada { get; set; }
         // Referencia a Precios dentro de Cursos
         public Precio Precio { get; set; }
+        public ICollection<Comentario> ComentarioLista { get; set; }
     }
 }
