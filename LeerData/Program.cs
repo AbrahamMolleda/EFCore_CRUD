@@ -10,13 +10,13 @@ namespace LeerData
         {
             using(var db = new AppVentaCursosContext())
             {
-               var cursos = db.Curso.Include( c => c.ListaComentarios).AsNoTracking();
+               var cursos = db.Curso.Include( c => c.InstructorLink).ThenInclude(ci => ci.Instructor).AsNoTracking();
                foreach (var curso in cursos)
                {
                    Console.WriteLine(curso.Titulo);
-                   foreach (var Comentario in curso.ListaComentarios)
+                   foreach (var instructorLink in curso.InstructorLink)
                    {
-                       Console.WriteLine("***" + Comentario.ComentarioTexto);
+                       Console.WriteLine("Instructor: " + instructorLink.Instructor.Nombre);
                    }
                }
             }
