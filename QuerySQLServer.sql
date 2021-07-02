@@ -21,6 +21,8 @@ CREATE TABLE Precio (
     CursoId INT
 )
 
+EXEC sp_rename 'Precio.Promocio', 'Promocion', 'COLUMN';
+
 ALTER TABLE Precio
 ADD CONSTRAINT FK_PRECIO_CURSO
     FOREIGN KEY (CursoId)
@@ -34,6 +36,10 @@ VALUES ('React Hooks Firebase y Material Design', 'Curso de Programacion', '2020
 INSERT INTO Curso (Titulo, Descripcion, FechaPublicacion)
 VALUES ('ASP .NET Core y React Hooks', 'Curso de .NET y JS', '2020-11-10')
 
+INSERT INTO Precio VALUES (900.00, 9.99, 1)
+INSERT INTO Precio VALUES (650.00, 15.00, 2)
+
+
 UPDATE Curso
 SET FechaPublicacion = '2020-02-05'
 WHERE CursoId = 1
@@ -43,3 +49,5 @@ SET FechaPublicacion = '2020-11-10'
 WHERE CursoId = 2
 
 SELECT * FROM Curso
+SELECT * FROM Precio
+
