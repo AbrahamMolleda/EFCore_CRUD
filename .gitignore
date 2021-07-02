@@ -1,0 +1,7 @@
+#Visual Studio Code
+.vscode
+
+#Bbin y obj
+[Bb]in/
+[Oo]bj/
+build/
