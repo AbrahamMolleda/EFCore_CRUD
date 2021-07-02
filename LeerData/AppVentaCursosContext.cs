@@ -22,6 +22,7 @@ namespace LeerData
         // UN DbSet dentro de DbContext representa una tabla o una vista dentro de la DB
         public DbSet<Curso> Curso { get; set; }
         public DbSet<Precio> Precio { get; set; }
+        public DbSet<Comentario> Comentario { get; set; }
 
 
     }
